@@ -95,13 +95,13 @@ const Tag = styled.span`
     display: inline-block;
     background: ${theme.tagBackground};
     color: ${theme.paleText};
-    padding: 5px 7px;
+    padding: 4px 10px;
     border-radius: 7px;
 `
 
 const GreenTag = styled(Tag)`
     background: ${theme.greenTagBackground};
-    color: ${theme.text};
+    color: ${theme.greenTagText};
 `
 
 const truncate = (str, noWords) => {
