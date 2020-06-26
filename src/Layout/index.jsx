@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Container = styled.div`
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0px 25px;
@@ -39,6 +39,7 @@ const Masthead = styled.h1`
 `
 
 const Footer = styled.footer`
+    margin-top: 50px;
     padding: 50px 0px;
     background: ${theme.tagBackground};
 `
@@ -51,6 +52,15 @@ const FooterText = styled.p`
     margin-bottom: 15px;
     &:last-of-type{
         margin-bottom: 0px;
+    }
+    a{
+        &:hover{
+            text-decoration: none;
+        }
+        &:focus{
+            background: ${theme.greenTagBackground};
+            box-shadow: 0px 0px 0px 3px ${theme.greenTagBackground};
+        }
     }
 `
 
@@ -71,10 +81,27 @@ const Layout = ({
                     Built in 2020 using open data from Buckinghamshire Council.
                 </FooterText>
                 <FooterText>
-                    <a href="#">Product code</a> available under an MIT license. Data is available under an <a href="#">Open Government license</a>.
+                    <a href="http://github.com/wearefuturegov/find-a-childminder">Product code</a> available under an MIT license. Data is available under an <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government license</a>.
                 </FooterText>
             </Container>
         </Footer>
     </>
 
 export default Layout
+
+export const ResultsList = styled.ul`
+    list-style: none;
+    margin-top: 15px;
+    @media screen and (min-width: 700px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 35px;
+    }
+`
+
+export const Welcome = styled.p`
+    margin: 100px auto;
+    text-align: center;
+    font-size: 1.5rem;
+    color: ${theme.paleText};
+`
