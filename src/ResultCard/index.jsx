@@ -5,6 +5,18 @@ import agesIcon from "./ages.svg"
 import distanceIcon from "./distance.svg"
 
 const Outer = styled.li`
+
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(5px)
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px)
+        }
+    }
+
     position: relative;
     background: ${theme.white};
     border-radius: 15px;
@@ -13,6 +25,7 @@ const Outer = styled.li`
     margin-bottom: 25px;
     cursor: pointer;
     transition: 0.2s ease-out;
+    animation: fadeIn 0.1s ease-out;
     @media screen and (min-width: 700px){
         margin-bottom: 35px;
         padding: 35px;
