@@ -40,6 +40,9 @@ const Input = styled.input`
     padding: 10px;
     width: 100%;
     max-width: 100%;
+    &::placeholder{
+        color: ${theme.lightText}50;
+    }
     &:focus{
         outline: none;
         box-shadow: 0px 0px 0px 3px ${theme.greenTagBackground};

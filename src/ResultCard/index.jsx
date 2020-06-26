@@ -8,12 +8,14 @@ const Outer = styled.li`
     position: relative;
     background: ${theme.white};
     border-radius: 15px;
-    padding: 35px;
+    padding: 30px;
     box-shadow: 0px 5px 20px ${theme.tagBackground};
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     cursor: pointer;
     transition: 0.2s ease-out;
     @media screen and (min-width: 700px){
+        margin-bottom: 35px;
+        padding: 35px;
         &:nth-of-type(odd):hover{
             transform: scale(1.03) rotate(-1deg);
         }
