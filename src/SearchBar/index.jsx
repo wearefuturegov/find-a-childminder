@@ -41,6 +41,7 @@ const Input = styled.input`
     width: 100%;
     max-width: 100%;
     &:focus{
+        outline: none;
         box-shadow: 0px 0px 0px 3px ${theme.greenTagBackground};
     }
 `
@@ -59,6 +60,7 @@ const Select = styled.select`
     background-position: center right;
     background-repeat: no-repeat;
     &:focus{
+        outline: none;
         box-shadow: 0px 0px 0px 3px ${theme.greenTagBackground};
     }
 `
@@ -90,6 +92,7 @@ const Button = styled.button`
         background: linear-gradient(90deg, ${theme.button1Hover}, ${theme.button2Hover});
     }
     &:focus{
+        outline: none;
         box-shadow: 0px 0px 0px 3px ${theme.greenTagBackground};
     }
     @media screen and (min-width: 700px){

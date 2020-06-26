@@ -32,6 +32,7 @@ const Masthead = styled.h1`
     font-size: 3rem;
     line-height: 1.1;
     margin-bottom: 25px;
+    word-wrap: break-word;
     @media screen and (min-width: 700px){
         max-width: 66.67%;
         font-size: 4.5rem;
@@ -101,6 +102,7 @@ export const ResultsList = styled.ul`
 
 export const Welcome = styled.p`
     margin: 100px auto;
+    padding: 0px 30px;
     text-align: center;
     font-size: 1.5rem;
     color: ${theme.paleText};
