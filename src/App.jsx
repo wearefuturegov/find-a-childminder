@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import Layout, { ResultsList, Welcome } from "./Layout"
 import ResultCard from "./ResultCard"
 import SearchBar from "./SearchBar"
