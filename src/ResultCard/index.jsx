@@ -98,7 +98,7 @@ const Distance = styled.span`
     }
 `
 
-const Ages = styled(Distance)`
+const AgeTag = styled(Distance)`
     &:before{
         background-image: url(${agesIcon});
     }
@@ -141,7 +141,9 @@ const ResultCard = ({
     description,
     url,
     distance_away,
-    ages
+    min_age,
+    max_age,
+    current_vacancies
 }) =>
     <Outer>
         <Link href={url}>        
@@ -150,10 +152,28 @@ const ResultCard = ({
         <p>{truncate(description, 30)}</p>
         <Footer>
             <Distance>{prettyDistance(distance_away)}</Distance>
-            <Ages>0-7 years</Ages>
-            <GreenTag>Spaces available</GreenTag>  
-            {/* <Tag>No spaces right now</Tag>   */}
+            <Ages min_age={min_age} max_age={max_age}/>
+            {current_vacancies ?
+                <GreenTag>Spaces available</GreenTag>  
+                :
+                <Tag>No spaces right now</Tag>
+            }
         </Footer>
     </Outer>
 
 export default ResultCard
+
+const Ages = ({
+    min_age,
+    max_age
+}) => {
+    if(min_age && max_age){
+        return <AgeTag>{min_age}-{max_age} years</AgeTag>
+    } else if (min_age){
+        return <AgeTag>From {min_age} years</AgeTag>
+    } else if (max_age){
+        return <AgeTag>To {max_age} years</AgeTag>
+    } else {
+            return <AgeTag>All ages</AgeTag>
+    }   
+}
