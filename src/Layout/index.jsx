@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 import theme from "../_theme"
+import logo from "./logo.svg"
 
 const GlobalStyle = createGlobalStyle`
     *{
@@ -35,7 +36,7 @@ const Masthead = styled.h1`
     word-wrap: break-word;
     @media screen and (min-width: 700px){
         max-width: 66.67%;
-        font-size: 4.5rem;
+        font-size: 5rem;
     }
 `
 
@@ -43,6 +44,11 @@ const Footer = styled.footer`
     margin-top: 50px;
     padding: 50px 0px;
     background: ${theme.tagBackground};
+`
+
+const Img = styled.img`
+    display: block;
+    margin: 0 auto 25px auto;
 `
 
 const FooterText = styled.p`
@@ -78,7 +84,8 @@ const Layout = ({
         </Container>
         <Footer>
             <Container>
-            <FooterText>
+                <Img src={logo} alt="Buckinghamshire Council"/>
+                <FooterText>
                     Built in 2020 using open data from Buckinghamshire Council.
                 </FooterText>
                 <FooterText>

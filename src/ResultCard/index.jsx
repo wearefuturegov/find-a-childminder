@@ -83,7 +83,7 @@ const Distance = styled.span`
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
-    margin: 15px 0px;
+    margin: 10px 0px;
     margin-right: 20px;
     &:before{
         content: "";
